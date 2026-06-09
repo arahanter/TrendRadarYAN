@@ -169,6 +169,19 @@ rss:
     #   enabled: false
     #   max_age_days: 0               # 示例：禁用过滤，推送所有文章
 
+    # === AI HOT 精选（摘要由LLM生成，引用前请回原文核对） ===
+    - id: "aihot-curated"
+      name: "AI HOT 精选"
+      url: "https://aihot.virxact.com/feed.xml"
+
+    - id: "aihot-all"
+      name: "AI HOT 全部动态"
+      url: "https://aihot.virxact.com/feed/all.xml"
+
+    - id: "aihot-daily"
+      name: "AI HOT 日报"
+      url: "https://aihot.virxact.com/feed/daily.xml"
+
 
 # ===============================================================
 # 4. 报告模式
