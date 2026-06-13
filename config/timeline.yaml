@@ -250,10 +250,9 @@ presets:
         start: "13:00"
         end: "15:00"
         push: true                 # 午间推送当前在榜热点
-        analyze: true              # 午间 AI 分析当前热点
-        ai_mode: "current"         # AI 分析当前榜单
         report_mode: "current"     # 当前在榜的新闻
-        # once 继承 default（analyze: true, push: true）→ 只推/分析一次
+        # analyze 继承 default: false → 午间不做 AI 分析，节省 API
+        # once 继承 default（push: true）→ 只推一次
 
       closing_summary:
         name: "收工汇总"
@@ -516,7 +515,7 @@ custom:
   # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   day_plans:
     workday:                       # 工作日计划
-      periods: ["deep_quiet", "weekday_morning", "noon_update", "evening_summary"]
+      periods: ["deep_quiet", "weekday_morning", "evening_summary"]
     weekend:                       # 周末计划（用 weekend_morning 替换 weekday_morning）
       periods: ["deep_quiet", "weekend_morning", "evening_summary"]
 
